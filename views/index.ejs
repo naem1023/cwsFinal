@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Cloud Web Service Project, "Which one is best?"</h1>
+    <p style="font-size: 20px;">Welcome to project "Which one is best?"</p>
+    <p style="font-size: 20px;">Konkuk Univ. 201611263 Park Sungho</p>
+    <br>
+
+    <h2>List for investing</h2>
+
+    <ul>
+      
+        <% for(var i = 0; i < good_data.length; i++){ %> 
+          <li><%= good_data[i].name %></li>
+         <% } %>
+    </ul>
+
+    <h2>List for avoiding</h2>
+    
+    <ul>
+        <% for(var i = 0; i < bad_data.length; i++){ %> 
+          <li><%= bad_data[i].name %></li>
+         <% } %>
+    </ul>
+
+    <h2>We provide</h2>
+    
+    <p>people to choose field and company which value is best to investing. </p>
+    <p>List of recommendation field and company will be refresh by 1 week.</p>
+
+    <h2>How to use</h2>
+    
+    <ul>
+      <li>
+        Just visit our website and use list of recommendation field and company for investing.
+      </li>
+      <li>
+        Use our API in your application. API is provided in RESTful, giving information in JSON.
+        <br>
+        <p>api list</p>
+        <p>/v1/goodinvest/{날짜}</p>
+        <p>/v1/badinvest/{날짜}</p>
+      </li>
+    </ul>
+
+    <h2>Reference</h2>
+    <p>All data is provided by <a href="https://data.go.kr/">https://data.go.kr/</a></p>
+  </body>
+</html>
